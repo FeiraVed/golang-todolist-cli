@@ -39,6 +39,9 @@ func (view *TodolistViewImpl) ShowTodolist(w io.Writer) {
 	s := strings.Split(newData, " ")
 
 	for i, v := range s {
+		if v == "" {
+			continue
+		}
 		fmt.Fprintln(w, strconv.Itoa(i+1)+".", strings.Replace(v, "+", " ", -1))
 	}
 }
