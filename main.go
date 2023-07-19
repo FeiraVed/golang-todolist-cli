@@ -1,22 +1,20 @@
 package main
 
 import (
-	"FeiraVed/todolist/controller"
 	"FeiraVed/todolist/core"
 	"FeiraVed/todolist/helper"
-	"FeiraVed/todolist/repository"
-	"FeiraVed/todolist/service"
-	"FeiraVed/todolist/view"
+	"FeiraVed/todolist/injector"
 	"bytes"
 	"fmt"
 	"os"
 	"time"
 )
 
-var Repository = repository.NewTodolistRepository()
-var Service = service.NewTodolistService(Repository)
-var Controller = controller.NewTodolistController(Service)
-var View = view.NewTodolistView(Controller)
+// var Repository = repository.NewTodolistRepository()
+// var Service = service.NewTodolistService(Repository)
+// var Controller = controller.NewTodolistController(Service)
+// var View = view.NewTodolistView(Controller)
+var View = injector.InitializedView()
 
 func ShowTodolist() {
 	buffer := bytes.Buffer{}

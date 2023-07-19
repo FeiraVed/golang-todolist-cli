@@ -16,7 +16,7 @@ type TodolistViewImpl struct {
 	controller controller.TodolistController
 }
 
-func NewTodolistView(controller controller.TodolistController) TodolistView {
+func NewTodolistView(controller controller.TodolistController) *TodolistViewImpl {
 	return &TodolistViewImpl{
 		controller: controller,
 	}

@@ -15,7 +15,7 @@ type TodolistServiceImpl struct {
 // INFO: Simulasi basis data key-value
 var data = db.TodolistDB
 
-func NewTodolistService(todolistRepository repository.TodolistRepository) TodolistService {
+func NewTodolistService(todolistRepository repository.TodolistRepository) *TodolistServiceImpl {
 
 	return &TodolistServiceImpl{
 		repository: todolistRepository,

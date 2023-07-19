@@ -10,7 +10,7 @@ import (
 type TodolistRepositoryImpl struct {
 }
 
-func NewTodolistRepository() TodolistRepository {
+func NewTodolistRepository() *TodolistRepositoryImpl {
 
 	return &TodolistRepositoryImpl{}
 }
